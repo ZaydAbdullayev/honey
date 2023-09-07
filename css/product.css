@@ -1,0 +1,49 @@
+a{
+    text-decoration: none;
+}
+
+.Honey_container {
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+    padding: 3% 7%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    background-image: url(../Assets/Backround/bg_produc.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    overflow: hidden;
+}
+
+.honey_box_2 {
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 80px;
+    background: none;
+}
+
+.honey_item_2 {
+    width: 330px;
+    height: 369px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #FFFFFF;
+    border-radius: 10px;
+    text-align: center;
+    color: #FFA638;
+}
+
+.honey_item_2>figure>:nth-child(2) {
+    font-weight: 500;
+    font-size: 22px;
+    line-height: 1.5;
+}
+
+.honey_item_2>figure>:nth-child(3) {
+    font-weight: 600;
+    font-size: 15px;
+}

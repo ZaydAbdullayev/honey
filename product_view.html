@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Honey Shop</title>
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/product.css">
+    <link rel="stylesheet" href="./css/product_view.css">
+    <link href="https://fonts.googleapis.com/css2?family=Kodchasan:wght@500&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <div id="root" class="modal">
+        <!-----------Navbar section---------->
+        <nav id="navbar" style="background: #FFA638;">
+            <div>
+                <img src="./Assets/Icons/honey_font.svg" alt="Icons" style="filter: invert(10%) sepia(83%) saturate(7500%) hue-rotate(273deg)
+                          brightness(17%) contrast(87%);">
+            </div>
+            <a href="./index.html">Home</a>
+            <a href="./about.html">About</a>
+            <a href="./product.html">Our Product</a>
+            <a href="./contact.html">Contact</a>
+        </nav>
+
+        <!-----------Home section---------->
+        <div class="Honey_container">
+            <p>Sifatli Tog' Asali</p>
+            <div class="product_corusel">
+                <a href="./product_view.html" class="honey_item_2 corusel" class="boxMedia">
+                    <figure>
+                        <img src="./Assets/Images/product_images_4.png" alt="foto">
+                    </figure>
+                </a>
+                <a href="./product_view.html" class="honey_item_2 corusel" class="boxMedia">
+                    <figure>
+                        <img src="./Assets/Images/product_images_6.png" alt="foto">
+                    </figure>
+                </a>
+                <a href="./product_view.html" class="honey_item_2 corusel" class="boxMedia">
+                    <figure>
+                        <img src="./Assets/Images/product_images_8.svg" alt="foto">
+                    </figure>
+                </a>
+                <a href="./product_view.html" class="honey_item_2 corusel" class="boxMedia">
+                    <figure>
+                        <img src="./Assets/Images/product_images_3.png" alt="foto">
+                    </figure>
+                </a>
+                <script>
+                    const box = document.querySelectorAll(".#box");
+                    const boxMedia = document.querySelectorAll("#boxMedia");
+                    const offsetWidth = box[0].offsetWidth;
+
+                    function AuotoSlide(position = 0) {
+                        boxMedia.forEach((item, index) => {
+                            item.style.transform = `translateX(-${position * offsetWidth}px)`;
+                        });
+                    }
+
+                    let position = 0;
+
+                    setInterval(() => {
+                        position += 1;
+
+                        if (position === boxMedia.length) {
+                            position = 0;
+                            AuotoSlide(0);
+                        } else {
+                            AuotoSlide(position);
+                        }
+                    }, 3000);
+                </script>
+            </div>
+            <div class="payment">
+                <p>What is Lorem Ipsum? <br>
+                    Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
+                    industry's standard
+                    dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to
+                    make a type specimen
+                    book. It has survived not only five centuries, but also the leap into electronic
+                </p>
+                <div class="payment_info_much">
+                    <p>Narxi:</p>
+                    <p>120 000 so'm</p>
+                </div>
+                <div class="payment_info_much">
+                    <p>Og'rligi:</p>
+                    <p>950 g</p>
+                </div>
+                <div class="payment_info_much">
+                    <p>Xudud:</p>
+                    <p>tog'</p>
+                </div>
+                <div class="book_box">
+                    <form>
+                        <button type="button" class="book" onclick="Open()">Xarid qilish</button>
+                        <button type="button"><a href="./contact.html">Biz bilan bog'lanish</a></button>
+                    </form>
+                </div>
+                <div class="extra_box">
+                    <a href="./product_view.html" class="honey_item_2">
+                        <figure>
+                            <img src="./Assets/Images/product_images_1.png" alt="foto">
+                            <p>Tog' Asali 1 kg</p>
+                            <p>119 000 so'm</p>
+                        </figure>
+                    </a>
+                    <a href="./product_view.html" class="honey_item_2">
+                        <figure>
+                            <img src="./Assets/Images/product_images_2.png" alt="foto">
+                            <p>Tog' Asali 1 kg</p>
+                            <p>119 000 so'm</p>
+                        </figure>
+                    </a>
+                    <a href="./product_view.html" class="honey_item_2">
+                        <figure>
+                            <img src="./Assets/Images/product_images_3.png" alt="foto">
+                            <p>Tog' Asali 1 kg</p>
+                            <p>119 000 so'm</p>
+                        </figure>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <div class="window">
+            <div class="window_input_box">
+                <form class="input_box">
+                    <p>Tog' asali 950g <br> 120 000 so'm</p>
+                    <input type="text" placeholder="Ism Familyangiz" required>
+                    <input type="number" placeholder="Telefon raqamingiz" required>
+                    <input type="text" placeholder="Manzilingiz" required>
+                    <button>Buyurtma Berish</button>
+                </form>
+                <button onclick="Close()"><img src="./Assets/Icons/close_ring.svg" alt="icon"></button>
+            </div>
+        </div>
+
+        <!-----------Footer section---------->
+        <footer class="foot">
+            <a href="#"><img src="./Assets/Icons/honey_font_black.svg" alt="icon"></a>
+            <p>Honey is one of the prime ingredients in your everyday food schedule.</p>
+            <div class="sosyal_media">
+                <a href="https://twitter.com" target="_blank"><img src="./Assets/Icons/twitter.svg" alt="icon"></a>
+                <a href="https://facebook.com" target="_blank"><img src="./Assets/Icons/facebook.svg" alt="icon"></a>
+                <a href="https://google.ru" target="_blank"><img src="./Assets/Icons/google.svg" alt="icon"></a>
+                <a href="https://pinterest.com" target="_blank"><img src="./Assets/Icons/pinterest.svg" alt="icon"></a>
+            </div>
+            <div class="download">
+                <a href="https://play.google.com/store/apps?hl=tr&gl=US&pli=1" target="_blank">
+                    <img src="./Assets/Icons/google_play.svg" alt="icon">
+                </a>
+                <a href="https://apple.com/store/apps?hl=tr&gl=US&pli=1" target="_blank">
+                    <img src="./Assets/Icons/app_store.svg" alt="icon">
+                </a>
+            </div>
+        </footer>
+    </div>
+</body>
+<script src="./JavaScript/product.js"></script>
+
+</html>

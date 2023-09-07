@@ -1,0 +1,82 @@
+.contact{
+    position: relative;
+}
+
+.focus {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 9;
+    justify-content: flex-start;
+    padding-top: 50px;
+    overflow-y: auto;
+}
+
+/* .search{
+    position: relative;
+}
+
+.search>input::after{
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 50px;
+    height: 100%;
+    background: red;
+} */
+
+.margin {
+    margin: 3.5% 0 2%;
+}
+
+.your_book {
+    width: 1000px;
+    padding: 2%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #fff;
+    color: #000;
+    font-size: 24px;
+    font-weight: 500;
+    border-radius: 10px;
+    z-index: 99999;
+}
+
+.your_book>figure {
+    width: 200px;
+    height: 200px;
+    overflow: hidden;
+}
+
+.your_book>figure>img {
+    width: 100%;
+    height: 100%;
+}
+
+.kg_info,
+.date_info {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    line-height: 2;
+}
+
+.disabled>button {
+    height: 30px;
+    color: #fff;
+    border-radius: 5px;
+    border: none;
+    overflow: none;
+}
+
+.disabled>:nth-child(1) {
+    width: 200px;
+    background: red;
+}
+
+.disabled>:nth-child(2) {
+    width: 100px;
+    background: blue;
+}

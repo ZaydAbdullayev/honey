@@ -1,0 +1,214 @@
+
+/*==========Double btn=========*/
+.double_btn {
+    position: relative;
+    width: 165px;
+    height: 55px;
+    font-weight: 500;
+    font-size: 18px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont;
+    border: 1px solid #D6D6D6;
+    background: #e6e6e6;
+}
+
+.double_btn::after {
+    content: '';
+    position: absolute;
+    top: 4px;
+    left: 4px;
+    width: 165px;
+    height: 55px;
+    border: 1px solid #D6D6D6;
+    z-index: -9;
+}
+
+.double_btn:hover {
+    background: #333333;
+    color: #fff;
+}
+
+.double_btn:hover::after {
+    display: none;
+}
+
+/*==========/Double btn=========*/
+
+/*==========E_mail box=========*/
+.e_mail_btn {
+    position: relative;
+    width: 418px;
+    height: 85px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #FFFFFF;
+    gap: 15px;
+    z-index: 9;
+}
+
+.e_mail_btn::after {
+    content: '';
+    position: absolute;
+    width: 448px;
+    height: 113px;
+    background: none;
+    border: 1px solid #FFFFFF;
+    z-index: -9;
+}
+
+.e_mail_btn:first-child {
+    width: 200px;
+    height: 45px;
+    padding: 0% 3%;
+    font-weight: 500;
+    font-size: 18px;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont;
+    background: #FFFFFF;
+    border: 1px solid #D6D6D6;
+    outline: none;
+}
+
+.e_mail_btn::placeholder {
+    font-weight: 500;
+    font-size: 14px;
+    letter-spacing: 0.1em;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont;
+    text-transform: uppercase;
+    color: rgba(51, 51, 51, 0.5);
+}
+
+.universal_btn {
+    width: 224px;
+    height: 51px;
+    background: #FFFFFF;
+    border: 1px solid #333333;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont;
+    font-weight: 500;
+    font-size: 18px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+}
+
+.btn_black {
+    width: 255px;
+    height: 51px;
+    margin: 4% 0%;
+    background: #333333;
+    color: #FFFFFF;
+}
+
+/*==========/E_mail box=========*/
+
+/*==========Gradient btn=========*/
+.gradient_btn {
+    width: 280px;
+    height: 45px;
+    background-image: linear-gradient(to left, #333680 20%, #fa5cc3);
+    border-radius: 5px;
+    border: none;
+    outline: none;
+    font-size: 14px;
+    font-weight: 600;
+    letter-spacing: 0.3rem;
+    color: aliceblue;
+    transition: all 0.5s ease-in-out;
+}
+
+.gradient_btn:hover {
+    background: linear-gradient(to left, #fa5cc3, #333680);
+
+}
+
+/* .gradient_btn:active {
+    transform: scale(1.1);
+} */
+/*==========/Gradient btn=========*/
+
+/*==========Shiney btn=========*/
+.shiney_btn {
+    position: relative;
+    width: 230px;
+    height: 60px;
+    font-size: 24px;
+    background: none;
+    border-color: #1F92DD;
+    border-radius: 8px;
+    color: #1F92DD;
+    letter-spacing: 0.1rem;
+    overflow: hidden;
+}
+
+.shiney_btn::after {
+    content: "Shiney!";
+    position: relative;
+    position: absolute;
+    top: 0;
+    right: -100;
+    left: 0;
+    width: 0;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #1F92DD;
+    color: #fff;
+    transition: all 0.2s ease;
+}
+
+.shiney_btn:hover::after {
+    width: 100%;
+}
+
+.shiney_btn::before {
+    content: '';
+    position: absolute;
+    height: 200px;
+    width: 50px;
+    background: rgba(255, 255, 255, 0.753);
+    opacity: 0.9;
+    top: -10px;
+    left: 0;
+    transform: rotate(30deg) translateX(-150px);
+    z-index: 999;
+}
+
+.shiney_btn:hover::before {
+    transform: rotate(30deg) translate(200px, -150px);
+    transition: all 0.8s ease;
+}
+
+/*==========/Shiney btn=========*/
+
+/*==========/Aniamtion btn=========*/
+.animation_btn {
+    position: relative;
+    width: 230px;
+    height: 60px;
+    font-size: 24px;
+    border: none;
+    border-radius: 8px;
+    color: #ffff;
+    letter-spacing: 0.1rem;
+    background: linear-gradient(90deg, #225192,
+            #792655,
+            #720a8b,
+            #1f067a,
+            #225192);
+    background-size: 400%;
+    z-index: 99999;
+}
+.animation_btn:hover {
+    animation: animate 8s linear infinite;
+}
+
+@keyframes animate {
+    0% {
+        background-position: 0%;
+    }
+
+    100% {
+        background-position: 400%;
+    }
+}
